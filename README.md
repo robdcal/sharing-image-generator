@@ -11,9 +11,12 @@ This app is designed to help users easily create a social sharing image for thei
 
 ## To do
 
-- Improve UI visuals
-- Change image font, etc
-- Allow the user to specify an image (blank colour, image, etc)
 - Set the correct image size
+- Add download button for image
+- Allow scraped page details to be edited
+- Also pull in author, date, logo, etc
+- Change font, colour, size, position, etc
 - Split the title over multiple lines if needed
-- etc etc
+- Allow the user to specify a background (blank colour, image from Unsplash API or uploaded directly, or pattern)
+- Improve UI visuals
+- Allow user to create an account and set permanent details (i.e. site name, logo)
