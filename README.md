@@ -11,7 +11,11 @@ This app is designed to help users easily create a social sharing image for thei
 
 ## To do
 
-- Set the correct image size
+- ~~Add URL entry component~~
+- ~~Add scraped data component~~
+- ~~Add generated image component~~
+- ~~Connect with Cloudinary API~~
+- ~~Set the correct image size~~
 - Add download button for image
 - Allow scraped page details to be edited
 - Also pull in author, date, logo, etc
