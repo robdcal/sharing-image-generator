@@ -7,7 +7,7 @@ import ScrapeResult from "./components/ScrapeResult";
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { title: "abc123" };
+    this.state = { title: "Default Text" };
     this.setTitle = this.setTitle.bind(this);
   }
 
