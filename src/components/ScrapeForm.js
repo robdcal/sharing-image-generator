@@ -3,19 +3,22 @@ import React from "react";
 class ScrapeForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { value: "", title: "" };
+    this.state = {
+      url: "https://www.robcallaghan.co.uk/blog/margin-collapsing-explained-with-examples/",
+      title: "",
+    };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(event) {
-    this.setState({ value: event.target.value });
+    this.setState({ url: event.target.value });
   }
 
   handleSubmit(event) {
-    // alert("A name was submitted: " + this.state.value);
-    this.getTitle(this.state.value);
+    // alert("A name was submitted: " + this.state.url);
+    this.getTitle(this.state.url);
     // this.props.setTitle(this.state.title);
     event.preventDefault();
   }
@@ -46,7 +49,7 @@ class ScrapeForm extends React.Component {
             URL:
             <input
               type="text"
-              value={this.state.value}
+              value={this.state.url}
               onChange={this.handleChange}
             />
           </label>
