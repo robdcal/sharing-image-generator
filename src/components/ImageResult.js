@@ -49,7 +49,7 @@ class ImageResult extends React.Component {
 
     // Apply the transformation.
     myImage
-      .resize(fill().height(250).width(400).gravity("south"))
+      .resize(fill().height(630).width(1200).gravity("south"))
       .overlay(
         source(
           image("samples/bike").transformation(
@@ -90,9 +90,9 @@ class ImageResult extends React.Component {
         ).position(
           new Position().gravity(compass("center")).offsetX(-45).offsetY(44)
         )
-      )
-      //   .resize(crop().width(300).height(250).x(30))
-      .roundCorners(byRadius(60));
+      );
+    //   .resize(crop().width(300).height(250).x(30))
+    // .roundCorners(byRadius(60));
 
     return (
       <div>
