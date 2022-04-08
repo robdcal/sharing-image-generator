@@ -94,9 +94,36 @@ class ImageResult extends React.Component {
     //   .resize(crop().width(300).height(250).x(30))
     // .roundCorners(byRadius(60));
 
+    const downloadImage = () => {
+      // console.log(e.target.href);
+      // get and store the URL
+      const imageUrl = "abc";
+      fetch(imageUrl, {
+        method: "GET",
+        headers: {},
+      })
+        .then((response) => {
+          response.arrayBuffer().then(function (buffer) {
+            const url = window.URL.createObjectURL(new Blob([buffer]));
+            const link = document.createElement("a");
+            link.href = url;
+            link.setAttribute("download", "image.jpeg"); //or any other extension
+            document.body.appendChild(link);
+            link.click();
+            link.remove();
+          });
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    };
+
     return (
       <div>
         <h2>ImageResult Component</h2>
+        <div>
+          <input type="submit" value="Download" onClick={downloadImage()} />
+        </div>
         <AdvancedImage cldImg={myImage} />
       </div>
     );
